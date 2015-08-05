@@ -10,4 +10,4 @@ type Camera(consumerKey, consumerSecret, accessToken, accessSecret) =
     member this.TakeUser(screenName) =
         let param = new Dictionary<string, Object>()
         param.["screen_name"] <- screenName
-        m_token.Users.Show(param)
+        m_records.AddUser(m_token.Users.Show(param))
